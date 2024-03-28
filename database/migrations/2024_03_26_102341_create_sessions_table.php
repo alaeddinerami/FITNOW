@@ -18,7 +18,7 @@ return new class extends Migration
             $table->float('weight');
             $table->float('chest');
             $table->float('waist');
-            $table->enum('status',['non terminer','terminer']);
+            $table->enum('status',['non terminer','terminer'])->default('non terminer');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
